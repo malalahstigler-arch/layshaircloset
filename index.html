@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lay's Hair Closet</title>
+<meta name="description" content="Lay's Hair Closet — premium bundles, wigs, closures and frontals.">
+<link rel="canonical" href="https://layshaircloset.com/">
+<meta property="og:title" content="Lay's Hair Closet | Raw Artisanal Luxury Hair">
+<meta property="og:description" content="Premium bundles, wigs and extensions. Free shipping on orders $150+.">
+<meta property="og:image" content="https://static.wixstatic.com/media/7791e9_6f16541e17d74c35996d2d125c072ca6~mv2.jpg/v1/fit/w_1200,h_1600,q_85/hero.jpg">
+<meta property="og:url" content="https://layshaircloset.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf7f2;
+    --surface: #ffffff;
+    --ink: #141414;
+    --muted: #6e675e;
+    --accent: #b8955a;
+    --accent-dark: #8f6f3a;
+    --blush: #f1e9dc;
+    --line: #e6ddcf;
+    --radius: 6px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f0f0f; --surface: #1a1a1a; --ink: #f4efe6; --muted: #b3a998;
+      --accent: #c9a66b; --accent-dark: #dcbd85; --blush: #221d15; --line: #2e2a24;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Poppins", system-ui, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.6; }
+  h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.2; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+  .btn { display: inline-block; background: var(--ink); color: var(--bg); padding: 13px 28px; border-radius: 999px; border: 0; font: 500 0.95rem "Poppins", sans-serif; cursor: pointer; transition: transform .15s, background .2s; }
+  .btn:hover { transform: translateY(-2px); background: var(--accent-dark); }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+  .btn.ghost:hover { background: var(--ink); color: var(--bg); }
+
+  /* Announcement + header */
+  .announce { background: var(--ink); color: var(--bg); text-align: center; font-size: .82rem; padding: 8px 16px; letter-spacing: .04em; }
+  header { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 70px; gap: 16px; }
+  .logo { font-family: "Playfair Display", serif; font-size: 1.5rem; font-weight: 700; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 28px; font-size: .93rem; }
+  .nav-links a:hover { color: var(--accent); }
+  .cart-btn { position: relative; background: none; border: 0; cursor: pointer; color: var(--ink); padding: 6px; }
+  .cart-count { position: absolute; top: -2px; right: -6px; background: var(--accent); color: #fff; font-size: .7rem; min-width: 19px; height: 19px; border-radius: 999px; display: grid; place-items: center; }
+  .menu-btn { display: none; background: none; border: 0; color: var(--ink); cursor: pointer; }
+
+  /* Hero */
+  .hero { padding: 80px 0 70px; background: radial-gradient(circle at 80% 20%, var(--blush), transparent 60%); }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: center; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .18em; font-size: .78rem; color: var(--accent-dark); font-weight: 600; }
+  .hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); margin: 14px 0 18px; }
+  .hero p { color: var(--muted); max-width: 470px; margin-bottom: 30px; }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-art { aspect-ratio: 4/5; border-radius: 200px 200px var(--radius) var(--radius); background: linear-gradient(160deg, #4a3a24, #0d0d0d 70%); position: relative; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(60,30,20,.5); }
+  .hero-art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .about-art img { width: 100%; height: 100%; object-fit: cover; }
+  .hero-badge { position: absolute; bottom: 22px; left: 22px; background: var(--surface); color: var(--ink); padding: 12px 18px; border-radius: 12px; font-size: .85rem; box-shadow: 0 10px 30px rgba(0,0,0,.15); }
+  .hero-badge b { display: block; font-size: 1.1rem; }
+
+  /* Perks */
+  .perks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 36px 0; border-bottom: 1px solid var(--line); }
+  .perk { text-align: center; font-size: .88rem; color: var(--muted); }
+  .perk strong { display: block; color: var(--ink); font-size: .95rem; }
+
+  /* Sections */
+  section { padding: 80px 0; }
+  .section-head { text-align: center; margin-bottom: 40px; }
+  .section-head h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); margin-top: 8px; }
+
+  /* Shop */
+  .filters { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
+  .chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink); padding: 8px 18px; border-radius: 999px; cursor: pointer; font: 400 .88rem "Poppins", sans-serif; }
+  .chip.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 26px; }
+  .card { background: var(--surface); border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 18px 40px -22px rgba(60,30,20,.35); }
+  .thumb { aspect-ratio: 1; position: relative; display: grid; place-items: center; overflow: hidden; }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .tag { position: absolute; top: 12px; left: 12px; background: var(--surface); color: var(--ink); font-size: .72rem; font-weight: 600; padding: 4px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: .06em; }
+  .card-body { padding: 18px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .card-body h3 { font-size: 1.15rem; }
+  .card-body p { font-size: .85rem; color: var(--muted); }
+  .price { font-weight: 600; font-size: 1.05rem; }
+  .card select { width: 100%; padding: 9px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font: inherit; font-size: .88rem; }
+  .card .btn { margin-top: auto; width: 100%; padding: 11px; }
+
+  /* Boho promo */
+  .promo { background: linear-gradient(rgba(10,10,10,.72), rgba(10,10,10,.72)), url("https://static.wixstatic.com/media/7791e9_a3787411748148128db901b64fc2d501~mv2.png/v1/fit/w_1200,h_1200,q_85/boho.jpg") center 40% / cover; color: #f4efe6; text-align: center; padding: 90px 0; }
+  .promo .eyebrow { color: var(--accent); }
+  .promo h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); margin: 10px 0 14px; }
+  .promo p { opacity: .8; max-width: 520px; margin: 0 auto 26px; }
+  .promo .btn { background: var(--accent); color: #141414; }
+  .promo .btn:hover { background: #f4efe6; }
+  .was { text-decoration: line-through; color: var(--muted); font-weight: 400; font-size: .9rem; margin-right: 6px; }
+  .discount { display: flex; justify-content: space-between; color: var(--accent-dark); font-size: .92rem; }
+  .nudge { font-size: .8rem; color: var(--muted); text-align: center; }
+
+  /* About */
+  .about { background: var(--blush); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+  .about h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); margin: 8px 0 18px; }
+  .about p { color: var(--muted); margin-bottom: 14px; }
+  .stats { display: flex; gap: 34px; margin-top: 26px; }
+  .stats b { font-family: "Playfair Display", serif; font-size: 2rem; display: block; color: var(--accent-dark); }
+  .stats span { font-size: .82rem; color: var(--muted); }
+  .about-art { aspect-ratio: 1; border-radius: var(--radius); background: linear-gradient(135deg, #c9977c, #5a3526); position: relative; overflow: hidden; }
+
+  /* Reviews */
+  .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .review { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+  .stars { color: var(--accent); letter-spacing: 2px; margin-bottom: 10px; }
+  .review p { font-size: .92rem; margin-bottom: 14px; }
+  .review small { color: var(--muted); }
+
+  /* Care / FAQ */
+  .faq { max-width: 760px; margin: 0 auto; }
+  details { border-bottom: 1px solid var(--line); padding: 18px 4px; }
+  summary { cursor: pointer; font-weight: 500; list-style: none; display: flex; justify-content: space-between; }
+  summary::after { content: "+"; font-size: 1.3rem; color: var(--accent); }
+  details[open] summary::after { content: "–"; }
+  details p { margin-top: 10px; color: var(--muted); font-size: .92rem; }
+
+  /* Booking / contact */
+  .contact { background: var(--ink); color: var(--bg); }
+  .contact .eyebrow { color: var(--accent); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; }
+  .contact h2 { font-size: clamp(1.9rem, 3.5vw, 2.6rem); margin: 8px 0 16px; }
+  .contact p { opacity: .75; }
+  .contact-info { margin-top: 26px; display: grid; gap: 10px; font-size: .93rem; }
+  form { display: grid; gap: 14px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  input, textarea, form select { width: 100%; padding: 13px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.06); color: inherit; font: inherit; font-size: .92rem; }
+  form select option { color: #222; }
+  input::placeholder, textarea::placeholder { color: inherit; opacity: .55; }
+  .contact .btn { background: var(--accent); color: #fff; }
+  .form-note { font-size: .85rem; color: var(--accent); min-height: 1.2em; }
+
+  footer { padding: 34px 0; text-align: center; font-size: .82rem; color: var(--muted); border-top: 1px solid var(--line); }
+  .socials { display: flex; justify-content: center; gap: 18px; margin-bottom: 10px; }
+  .socials a:hover { color: var(--accent); }
+
+  /* Cart drawer */
+  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,.4); opacity: 0; pointer-events: none; transition: opacity .25s; z-index: 90; }
+  .drawer { position: fixed; top: 0; right: 0; height: 100%; width: min(410px, 100%); background: var(--surface); z-index: 100; transform: translateX(100%); transition: transform .3s; display: flex; flex-direction: column; }
+  .cart-open .overlay { opacity: 1; pointer-events: auto; }
+  .cart-open .drawer { transform: none; }
+  .drawer-head { display: flex; justify-content: space-between; align-items: center; padding: 22px; border-bottom: 1px solid var(--line); }
+  .drawer-head button { background: none; border: 0; font-size: 1.6rem; cursor: pointer; color: var(--ink); }
+  .cart-items { flex: 1; overflow-y: auto; padding: 10px 22px; }
+  .cart-item { display: grid; grid-template-columns: 64px 1fr auto; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line); align-items: center; }
+  .cart-item .mini { width: 64px; height: 64px; border-radius: 10px; overflow: hidden; }
+  .cart-item h4 { font-size: .92rem; font-weight: 500; }
+  .cart-item small { color: var(--muted); }
+  .qty { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+  .qty button { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg); color: var(--ink); cursor: pointer; }
+  .remove { background: none; border: 0; color: var(--muted); cursor: pointer; font-size: .78rem; text-decoration: underline; }
+  .drawer-foot { padding: 22px; border-top: 1px solid var(--line); display: grid; gap: 12px; }
+  .total { display: flex; justify-content: space-between; font-weight: 600; font-size: 1.05rem; }
+  .empty { text-align: center; color: var(--muted); padding: 50px 0; }
+
+  .toast { position: fixed; bottom: 24px; left: 50%; transform: translate(-50%, 120px); background: var(--ink); color: var(--bg); padding: 12px 22px; border-radius: 999px; font-size: .88rem; transition: transform .3s; z-index: 120; }
+  .toast.show { transform: translate(-50%, 0); }
+
+  @media (max-width: 860px) {
+    .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .hero-art { max-width: 380px; margin: 0 auto; width: 100%; }
+    .reviews { grid-template-columns: 1fr; }
+    .perks { grid-template-columns: repeat(2, 1fr); }
+    .menu-btn { display: block; }
+    .nav-links { position: absolute; top: 70px; left: 0; right: 0; background: var(--bg); flex-direction: column; gap: 0; border-bottom: 1px solid var(--line); display: none; }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 14px 20px; border-top: 1px solid var(--line); }
+  }
+  @media (max-width: 520px) {
+    .wrap { padding: 0 16px; }
+    section { padding: 60px 0; }
+    .row { grid-template-columns: 1fr; }
+    .stats { gap: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="announce" id="announce">All orders $150+ get free shipping · $50 off $300+ · $75 off $450+ · $125 off $600+</div>
+
+<header>
+  <div class="wrap nav">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <a href="#" class="logo">Lay's <span>Hair Closet</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">Hair Care</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+      <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h14l-1.5 9h-11z"/><path d="M6 7 5 3H2"/><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">100% Virgin Human Hair</span>
+        <h1>Raw Artisanal<br>Luxury Hair</h1>
+        <p>We curate premium hair bundles, wigs, and extensions that redefine elegance. Experience the perfect blend of high-end aesthetics and professional-grade craftsmanship.</p>
+        <div class="hero-actions">
+          <a href="#shop" class="btn">Shop the Collection</a>
+          <a href="#about" class="btn ghost">Our Story</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="https://static.wixstatic.com/media/7791e9_6f16541e17d74c35996d2d125c072ca6~mv2.jpg/v1/fit/w_1200,h_1600,q_85/hero.jpg" alt="Model wearing long honey-highlighted body wave hair">
+        <div class="hero-badge"><b>4.9 ★</b>Loved by our clients</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap perks">
+    <div class="perk"><strong>Virgin hair</strong>Unprocessed, cuticle aligned</div>
+    <div class="perk"><strong>Fast shipping</strong>Ships in 1–3 business days</div>
+    <div class="perk"><strong>Dye & style ready</strong>Colour it, curl it, flat iron it</div>
+    <div class="perk"><strong>Secure checkout</strong>Easy & safe payment</div>
+  </div>
+
+  <section id="shop">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The Collection</span>
+        <h2>Shop the Closet</h2>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <div class="promo">
+    <div class="wrap promo-inner">
+      <span class="eyebrow">The New Collection</span>
+      <h2>Introducing Boho Hair</h2>
+      <p>Refine your beauty with our newest addition. Discover a seamless fusion of opulence and urban edge.</p>
+      <button class="btn" data-cat="Boho Hair">Save 15% Now</button>
+    </div>
+  </div>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-art">
+        <img src="https://static.wixstatic.com/media/7791e9_b844b4556ad54aaa8ecf4b585fa47748~mv2.jpg/v1/fit/w_1000,h_1000,q_85/wigs.jpg" alt="Model wearing a sleek straight middle-part wig" loading="lazy">
+      </div>
+      <div>
+        <span class="eyebrow">Our Story</span>
+        <h2>Hair that makes you feel like you</h2>
+        <p>Lay's Hair Closet started with one simple idea: every woman deserves hair that is soft, full and lasting, without the guesswork. We hand-select every bundle and wig so you can wear it with confidence.</p>
+        <p>From your first sew-in to your tenth wig install, we're here to help you pick the right texture, length and lace.</p>
+        <div class="stats">
+          <div><b>500+</b><span>Happy clients</span></div>
+          <div><b>12+</b><span>Textures & styles</span></div>
+          <div><b>4.9★</b><span>Average rating</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Real Reviews</span>
+        <h2>What clients are saying</h2>
+      </div>
+      <div class="reviews">
+        <div class="review"><div class="stars">★★★★★</div><p>"The body wave bundles are SO soft. No shedding after 3 washes, and it held curls all week."</p><small>— Sample review: replace with your own</small></div>
+        <div class="review"><div class="stars">★★★★★</div><p>"My frontal wig melted perfectly. The lace is thin and the plucked hairline looks natural."</p><small>— Sample review: replace with your own</small></div>
+        <div class="review"><div class="stars">★★★★★</div><p>"Fast shipping and great communication. I'll be ordering my next install from here."</p><small>— Sample review: replace with your own</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Hair Care & FAQ</span>
+        <h2>Good to know</h2>
+      </div>
+      <div class="faq">
+        <details><summary>How many bundles do I need?</summary><p>For lengths 10"–18", 3 bundles is usually enough for a full look. For 20" and longer, we recommend 3–4 bundles. Adding a closure or frontal? Go with 3.</p></details>
+        <details><summary>Can I dye or bleach the hair?</summary><p>Yes. Our virgin hair can be coloured, bleached and heat-styled. We recommend a professional colourist for blonde shades.</p></details>
+        <details><summary>How long does the hair last?</summary><p>With proper care, our hair lasts 1 year or longer. Use sulfate-free shampoo, deep condition and always sleep with a silk scarf or bonnet.</p></details>
+        <details><summary>How long does shipping take?</summary><p>Orders ship within 1–3 business days. You'll get a tracking number as soon as your order is on its way.</p></details>
+        <details><summary>What is your return policy?</summary><p>Unopened hair in its original packaging can be returned within 14 days. For hygiene reasons, opened, installed or altered hair can't be returned.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow">Get in touch</span>
+        <h2>Custom orders & questions</h2>
+        <p>Want a custom-coloured unit, a specific length, or help picking your texture? Send a message and we'll get back to you within 24 hours.</p>
+        <div class="contact-info" id="contactInfo"></div>
+      </div>
+      <form id="contactForm">
+        <div class="row">
+          <input name="name" placeholder="Your name" required>
+          <input name="email" type="email" placeholder="Email" required>
+        </div>
+        <select name="topic">
+          <option>General question</option>
+          <option>Custom wig order</option>
+          <option>Order status</option>
+          <option>Wholesale</option>
+        </select>
+        <textarea name="message" rows="5" placeholder="Tell us what you're looking for…" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+        <div class="form-note" id="formNote"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="socials" id="socials"></div>
+  © <span id="year"></span> Lay's Hair Closet. All rights reserved.
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" aria-label="Shopping cart">
+  <div class="drawer-head"><h3>Your Bag</h3><button id="closeCart" aria-label="Close cart">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="discount"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+    <div class="discount" id="discountRow" style="display:none"><span>Spend &amp; save</span><span id="cartDiscount"></span></div>
+    <div class="total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+    <div class="nudge" id="cartNudge"></div>
+    <button class="btn" id="checkoutBtn">Checkout</button>
+    <a class="btn ghost" id="wixShopBtn" target="_blank" rel="noopener" style="text-align:center">Shop on our Wix store</a>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   EDIT YOUR BUSINESS INFO HERE
+   ============================================================ */
+const CONFIG = {
+  businessName: "Lay's Hair Closet",
+  email: "hello@layshaircloset.com",            // <- your business email
+  phone: "(555) 123-4567",                        // <- your phone / text line
+  location: "Ships nationwide",
+  // Once your Wix store is published, checkout sends customers there:
+  wixStoreUrl: "https://malalahstigler17.wixsite.com/online-hair-store",
+  instagram: "https://instagram.com/",            // <- your Instagram link
+  tiktok: "https://tiktok.com/",                  // <- your TikTok link
+  currency: "USD"
+};
+
+/* ============================================================
+   YOUR PRODUCTS: add, remove or change anything below.
+   - "image": put a photo file in this folder (e.g. "images/bodywave.jpg")
+     or a web link. Leave it "" to show the styled placeholder.
+   - "options": lengths/sizes and their prices.
+   ============================================================ */
+const PRODUCTS = [
+  { id: "bw-bundle", name: "Brazilian Body Wave Bundle", category: "Bundles", tag: "Best Seller",
+    desc: "Soft, bouncy waves with natural shine. Single bundle, 100g.", image: "https://static.wixstatic.com/media/7791e9_19b1f864f3594172a302f9739953f613~mv2.png/v1/fit/w_1000,h_1000,q_85/extensions.jpg", tone: ["#8a5a43", "#3a2219"],
+    options: { '12"': 55, '16"': 70, '20"': 90, '24"': 115, '28"': 140 } },
+  { id: "st-bundle", name: "Silky Straight Bundle", category: "Bundles", tag: "",
+    desc: "Bone-straight, sleek and full from root to tip. 100g.", image: "https://static.wixstatic.com/media/7791e9_5986b9f5ef634a54a4ff560e3226663c~mv2.jpg/v1/fit/w_800,h_800,q_85/client1.jpg", tone: ["#4a2e24", "#1a110d"],
+    options: { '12"': 50, '16"': 65, '20"': 85, '24"': 110, '28"': 135 } },
+  { id: "dw-bundle", name: "Deep Wave Bundle", category: "Bundles", tag: "New",
+    desc: "Defined, voluminous curls that hold their pattern. 100g.", image: "https://static.wixstatic.com/media/7791e9_ec884ad552514d9f9820301abc0528b1~mv2.png/v1/fit/w_800,h_800,q_85/client3.jpg", tone: ["#6e4433", "#2a1912"],
+    options: { '12"': 60, '16"': 75, '20"': 95, '24"': 120 } },
+  { id: "bw-3pack", name: "Body Wave 3-Bundle Deal", category: "Bundles", tag: "Save $$",
+    desc: "Three matching bundles: everything you need for a full sew-in.", image: "https://static.wixstatic.com/media/7791e9_a3787411748148128db901b64fc2d501~mv2.png/v1/fit/w_1200,h_1200,q_85/boho.jpg", tone: ["#a46d52", "#4a2c20"],
+    options: { '14/16/18"': 185, '18/20/22"': 235, '22/24/26"': 295 } },
+  { id: "hd-frontal-wig", name: "13x4 HD Lace Frontal Wig", category: "Wigs", tag: "Best Seller",
+    desc: "Pre-plucked hairline, bleached knots, 180% density. Glueless-ready.", image: "https://static.wixstatic.com/media/7791e9_e8c301f886cb43e6b187d8b71c0b3786~mv2.jpg/v1/fit/w_800,h_800,q_85/client2.jpg", tone: ["#5b3a2c", "#1e1410"],
+    options: { '18"': 245, '22"': 295, '26"': 355, '30"': 420 } },
+  { id: "bob-wig", name: "Glueless Bob Wig", category: "Wigs", tag: "Beginner Friendly",
+    desc: "Wear & go 5x5 closure bob. Adjustable straps, no glue needed.", image: "", tone: ["#3d2820", "#120c0a"],
+    options: { '10"': 145, '12"': 165, '14"': 185 } },
+  { id: "honey-wig", name: "Honey Blonde Body Wave Wig", category: "Wigs", tag: "Trending",
+    desc: "Custom-coloured #27 honey blonde on a 13x4 HD lace frontal.", image: "", tone: ["#c99159", "#7a4e2c"],
+    options: { '20"': 310, '24"': 365, '28"': 425 } },
+  { id: "closure", name: "5x5 HD Lace Closure", category: "Bundles", tag: "",
+    desc: "Melts into all skin tones. Free part, pre-plucked.", image: "https://static.wixstatic.com/media/7791e9_b844b4556ad54aaa8ecf4b585fa47748~mv2.jpg/v1/fit/w_1000,h_1000,q_85/wigs.jpg", tone: ["#7d5240", "#2e1c15"],
+    options: { '14"': 75, '16"': 85, '18"': 95, '20"': 110 } },
+  { id: "frontal", name: "13x4 HD Lace Frontal", category: "Bundles", tag: "",
+    desc: "Ear-to-ear coverage for versatile parting and styling.", image: "", tone: ["#6a4535", "#251812"],
+    options: { '14"': 110, '16"': 125, '18"': 140, '20"': 160 } },
+  { id: "hd-tape-ins", name: "HD Lace Tape-In Extensions", category: "Extensions", tag: "Best Seller",
+    desc: "Invisible tape-ins that look and feel like your own hair. 40 pieces.", image: "", tone: ["#5e4630", "#1a140e"],
+    options: { '16"': 120, '20"': 150, '24"': 185 } },
+  { id: "clip-ins", name: "Seamless Clip-In Set", category: "Extensions", tag: "",
+    desc: "7-piece set, 160g. Add length and volume in minutes, no glue needed.", image: "https://static.wixstatic.com/media/7791e9_9e15e43b4b0f49f2b3079464ee437042~mv2.png/v1/fit/w_800,h_800,q_85/client4.jpg", tone: ["#7a5a3a", "#2a1f14"],
+    options: { '14"': 110, '18"': 140, '22"': 170 } },
+  { id: "kinky-ext", name: "Kinky Straight Clip-Ins", category: "Extensions", tag: "",
+    desc: "Blends with natural and relaxed textures. 8 pieces, 140g.", image: "", tone: ["#3e3022", "#0f0c09"],
+    options: { '14"': 115, '18"': 145, '22"': 175 } },
+  { id: "boho-wig", name: "Boho Goddess Locs Wig", category: "Boho Hair", tag: "New · 15% Off", sale: 0.15,
+    desc: "Bohemian curls woven through a lace front unit. Opulent with an urban edge.", image: "", tone: ["#a3804f", "#2a2016"],
+    options: { '22"': 330, '26"': 380, '30"': 440 } },
+  { id: "boho-bundle", name: "Boho Curl Bundles", category: "Boho Hair", tag: "New · 15% Off", sale: 0.15,
+    desc: "Loose bohemian curl pattern. Perfect for boho knotless and sew-ins. 100g.", image: "https://static.wixstatic.com/media/7791e9_0e5aad71efe6486cbfdedfeb142c9903~mv2.png/v1/fit/w_1000,h_1000,q_85/bundles.jpg", tone: ["#b8955a", "#3d2f1c"],
+    options: { '16"': 80, '20"': 100, '24"': 125 } },
+  { id: "silk-bonnet", name: "Satin Bonnet", category: "Accessories", tag: "",
+    desc: "Protect your install overnight. Double-layered satin.", image: "", tone: ["#d9b3a1", "#a57562"],
+    options: { "One size": 15 } },
+  { id: "melt-band", name: "Lace Melting Band", category: "Accessories", tag: "",
+    desc: "Lay your lace flat for a seamless melt.", image: "", tone: ["#caa08b", "#8c5e48"],
+    options: { "One size": 10 } },
+  { id: "care-kit", name: "Hair Care Kit", category: "Accessories", tag: "",
+    desc: "Sulfate-free shampoo, conditioner & leave-in, made for extensions.", image: "", tone: ["#b88a72", "#6b4535"],
+    options: { "Kit": 38 } }
+];
+
+/* ============================================================
+   Store logic (no need to edit below)
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+const money = n => n.toLocaleString("en-US", { style: "currency", currency: CONFIG.currency });
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem("lhc-cart")) || []; } catch (e) {}
+// Drop anything in a saved bag that no longer matches a product/length
+cart = cart.filter(l => { const p = PRODUCTS.find(x => x.id === l.id); return p && p.options[l.option] != null; });
+const saveCart = () => { try { localStorage.setItem("lhc-cart", JSON.stringify(cart)); } catch (e) {} };
+
+function artFor(p) {
+  if (p.image) return `<img src="${p.image}" alt="${p.name}" loading="lazy">`;
+  const [a, b] = p.tone;
+  const strands = [0, 1, 2, 3, 4, 5].map(i =>
+    `<path d="M${40 + i * 45} -10 C ${i * 45} 90, ${90 + i * 45} 160, ${30 + i * 45} 230 S ${70 + i * 45} 300, ${20 + i * 45} 320" />`).join("");
+  return `<svg viewBox="0 0 300 300" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs><linearGradient id="g-${p.id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs>
+    <rect width="300" height="300" fill="url(#g-${p.id})"/>
+    <g fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="5" stroke-linecap="round">${strands}</g></svg>`;
+}
+
+let activeCat = "All";
+function renderFilters() {
+  const cats = ["All", ...new Set(PRODUCTS.map(p => p.category))];
+  $("#filters").innerHTML = cats.map(c => `<button class="chip ${c === activeCat ? "active" : ""}" data-cat="${c}">${c}</button>`).join("");
+}
+// Price after any product sale (e.g. Boho Hair 15% off)
+const priceOf = (p, option) => Math.round(p.options[option] * (1 - (p.sale || 0)) * 100) / 100;
+const priceHtml = (p, option, prefix = "") =>
+  (p.sale ? `<span class="was">${money(p.options[option])}</span>` : "") + prefix + money(priceOf(p, option));
+
+function renderProducts() {
+  const list = PRODUCTS.filter(p => activeCat === "All" || p.category === activeCat);
+  $("#productGrid").innerHTML = list.map(p => {
+    const opts = Object.keys(p.options);
+    const single = opts.length === 1;
+    const cheapest = opts.reduce((a, b) => p.options[a] <= p.options[b] ? a : b);
+    return `<article class="card">
+      <div class="thumb">${artFor(p)}${p.tag ? `<span class="tag">${p.tag}</span>` : ""}</div>
+      <div class="card-body">
+        <h3>${p.name}</h3>
+        <p>${p.desc}</p>
+        <div class="price" id="price-${p.id}">${priceHtml(p, cheapest, single ? "" : "From ")}</div>
+        ${single ? "" : `<select data-id="${p.id}" aria-label="Choose length">${opts.map(k => `<option value="${esc(k)}">${k} · ${money(priceOf(p, k))}</option>`).join("")}</select>`}
+        <button class="btn" data-add="${p.id}">Add to Bag</button>
+      </div></article>`;
+  }).join("");
+}
+
+function addToCart(id) {
+  const p = PRODUCTS.find(x => x.id === id);
+  const sel = document.querySelector(`select[data-id="${id}"]`);
+  const option = sel ? sel.value : Object.keys(p.options)[0];
+  const key = id + "|" + option;
+  const line = cart.find(l => l.key === key);
+  line ? line.qty++ : cart.push({ key, id, option, qty: 1 });
+  saveCart(); renderCart(); toast(`Added ${p.name} (${option})`);
+}
+/* Spend more, save more: matches the deals on the Wix store */
+const TIERS = [{ min: 600, off: 125 }, { min: 450, off: 75 }, { min: 300, off: 50 }];
+const FREE_SHIPPING = 150;
+
+function totals() {
+  const subtotal = cart.reduce((s, l) => s + priceOf(PRODUCTS.find(x => x.id === l.id), l.option) * l.qty, 0);
+  const tier = TIERS.find(t => subtotal >= t.min);
+  const discount = tier ? tier.off : 0;
+  const next = [...TIERS].reverse().find(t => subtotal < t.min);
+  return { subtotal, discount, total: subtotal - discount, next };
+}
+
+function renderCart() {
+  const count = cart.reduce((n, l) => n + l.qty, 0);
+  $("#cartCount").textContent = count;
+  $("#cartItems").innerHTML = cart.length ? cart.map(l => {
+    const p = PRODUCTS.find(x => x.id === l.id);
+    if (!p) return "";
+    const price = priceOf(p, l.option);
+    return `<div class="cart-item">
+      <div class="mini">${artFor(p)}</div>
+      <div><h4>${p.name}</h4><small>${l.option} · ${money(price)}</small>
+        <div class="qty"><button data-dec="${esc(l.key)}">−</button>${l.qty}<button data-inc="${esc(l.key)}">+</button></div></div>
+      <button class="remove" data-rm="${esc(l.key)}">Remove</button></div>`;
+  }).join("") : `<div class="empty">Your bag is empty.<br>Time to treat yourself ✨</div>`;
+  const t = totals();
+  $("#cartSubtotal").textContent = money(t.subtotal);
+  $("#discountRow").style.display = t.discount ? "" : "none";
+  $("#cartDiscount").textContent = "−" + money(t.discount);
+  $("#cartTotal").textContent = money(t.total);
+  const notes = [];
+  if (cart.length && t.subtotal < FREE_SHIPPING) notes.push(`Add ${money(FREE_SHIPPING - t.subtotal)} more for free shipping`);
+  else if (cart.length) notes.push("✓ You've got free shipping");
+  if (cart.length && t.next) notes.push(`Spend ${money(t.next.min - t.subtotal)} more to save $${t.next.off}`);
+  $("#cartNudge").innerHTML = notes.join("<br>");
+}
+function changeQty(key, d) {
+  const l = cart.find(x => x.key === key); if (!l) return;
+  l.qty += d; if (l.qty <= 0) cart = cart.filter(x => x !== l);
+  saveCart(); renderCart();
+}
+
+function toast(msg) {
+  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove("show"), 2200);
+}
+const openCart = () => document.body.classList.add("cart-open");
+const closeCart = () => document.body.classList.remove("cart-open");
+
+function checkout() {
+  if (!cart.length) return toast("Your bag is empty");
+  // Sends the order summary by email. Swap this for your Wix/Shopify/Square checkout link when ready.
+  const lines = cart.map(l => {
+    const p = PRODUCTS.find(x => x.id === l.id);
+    return `${l.qty} x ${p.name} (${l.option}) - ${money(priceOf(p, l.option) * l.qty)}`;
+  });
+  const t = totals();
+  const body = `Hi! I'd like to order:\n\n${lines.join("\n")}\n\nSubtotal: ${money(t.subtotal)}` +
+    (t.discount ? `\nSpend & save discount: -${money(t.discount)}` : "") +
+    `\nTotal: ${money(t.total)}\nShipping: ${t.subtotal >= FREE_SHIPPING ? "FREE" : "to be confirmed"}\n\nName:\nShipping address:\nPhone:`;
+  window.location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent("New order - " + CONFIG.businessName)}&body=${encodeURIComponent(body)}`;
+}
+
+// Events
+document.addEventListener("click", e => {
+  const t = e.target.closest("button, a"); if (!t) return;
+  if (t.dataset.cat) {
+    activeCat = t.dataset.cat; renderFilters(); renderProducts();
+    if (!t.closest("#filters")) $("#shop").scrollIntoView();
+  }
+  if (t.dataset.add) addToCart(t.dataset.add);
+  if (t.dataset.inc) changeQty(t.dataset.inc, 1);
+  if (t.dataset.dec) changeQty(t.dataset.dec, -1);
+  if (t.dataset.rm) changeQty(t.dataset.rm, -Infinity);
+  if (t.closest("#navLinks")) $("#navLinks").classList.remove("open");
+});
+document.addEventListener("change", e => {
+  const s = e.target.closest("select[data-id]"); if (!s) return;
+  const p = PRODUCTS.find(x => x.id === s.dataset.id);
+  $("#price-" + p.id).innerHTML = priceHtml(p, s.value);
+});
+$("#cartBtn").onclick = openCart;
+$("#closeCart").onclick = closeCart;
+$("#overlay").onclick = closeCart;
+$("#checkoutBtn").onclick = checkout;
+$("#menuBtn").onclick = () => $("#navLinks").classList.toggle("open");
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeCart(); });
+
+$("#contactForm").onsubmit = e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const body = `Name: ${f.get("name")}\nEmail: ${f.get("email")}\nTopic: ${f.get("topic")}\n\n${f.get("message")}`;
+  window.location.href = `mailto:${CONFIG.email}?subject=${encodeURIComponent(f.get("topic") + " - " + CONFIG.businessName)}&body=${encodeURIComponent(body)}`;
+  $("#formNote").textContent = "Opening your email app to send your message…";
+};
+
+// Business info
+$("#contactInfo").innerHTML = `
+  <div>✉️ <a href="mailto:${CONFIG.email}">${CONFIG.email}</a></div>
+  <div>📱 ${CONFIG.phone}</div>
+  <div>📦 ${CONFIG.location}</div>
+  <div>🛍️ <a href="${CONFIG.wixStoreUrl}" target="_blank" rel="noopener">Visit our online store</a></div>`;
+$("#socials").innerHTML = `<a href="${CONFIG.instagram}" target="_blank" rel="noopener">Instagram</a><a href="${CONFIG.tiktok}" target="_blank" rel="noopener">TikTok</a><a href="#contact">Contact</a>`;
+$("#wixShopBtn").href = CONFIG.wixStoreUrl + "/category/all-products";
+$("#year").textContent = new Date().getFullYear();
+
+renderFilters(); renderProducts(); renderCart();
+</script>
+</body>
+</html>
