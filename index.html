@@ -363,7 +363,7 @@
 const CONFIG = {
   businessName: "Lay's Hair Closet",
   email: "hello@layshaircloset.com",            // <- your business email
-  phone: "(555) 123-4567",                        // <- your phone / text line
+  phone: "602-245-5333",                          // <- your phone / text line
   location: "Ships nationwide",
   // Once your Wix store is published, checkout sends customers there:
   wixStoreUrl: "https://malalahstigler17.wixsite.com/online-hair-store",
@@ -591,7 +591,7 @@ $("#contactForm").onsubmit = e => {
 // Business info
 $("#contactInfo").innerHTML = `
   <div>✉️ <a href="mailto:${CONFIG.email}">${CONFIG.email}</a></div>
-  <div>📱 ${CONFIG.phone}</div>
+  <div>📱 <a href="tel:${CONFIG.phone.replace(/[^0-9+]/g, "")}">${CONFIG.phone}</a></div>
   <div>📦 ${CONFIG.location}</div>
   <div>🛍️ <a href="${CONFIG.wixStoreUrl}" target="_blank" rel="noopener">Visit our online store</a></div>`;
 $("#socials").innerHTML = `<a href="${CONFIG.instagram}" target="_blank" rel="noopener">Instagram</a><a href="${CONFIG.tiktok}" target="_blank" rel="noopener">TikTok</a><a href="#contact">Contact</a>`;
